@@ -1,83 +1,210 @@
-.form{
-    font-family: Arial, Helvetica, sans-serif;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-height: 50%;
-}
-
-.Label{
-font-size: 10px;
-color: rgb(44, 179, 247);
-}
-
-h1{
-    text-align: center;
-    margin-bottom: 0px;
-    font-size: 18px;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.747);
-}
-input{
-    outline: none;
-    width: 100%;
-    height: 30px;
-    border: none;
-    border-bottom: solid 1px;
-}
-
-.container{
+/* Snapchat Login Styling - Clean Design */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  .snap-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 13vh;
-}
-.page{
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  .snap-header {
+    padding: 15px 0;
     display: flex;
-flex-direction: column;
-justify-content: space-between;
-    width: 80%;
-    margin: auto;
-height: 70vh;
-
-}
-
-
-.btn{
-    width: 80%;
-    margin: 0px auto;
-}
-
-.btn>button{
+    align-items: center;
+  }
+  
+  .snap-back-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: -5px;
+  }
+  
+  /* Content */
+  .snap-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .snap-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Form Elements */
+  .snap-form-group {
+    margin-bottom: 20px;
+  }
+  
+  .snap-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #00b2ff;
+    margin-bottom: 8px;
+  }
+  
+  .snap-input {
     width: 100%;
-        padding: 15px;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+  }
+  
+  .snap-input:focus {
+    outline: none;
+    border-color: #00b2ff;
+  }
+  
+  .snap-alternative {
+    margin-top: 8px;
+  }
+  
+  .snap-link {
+    color: #00b2ff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  /* Password Field */
+  .snap-password-container {
+    position: relative;
+  }
+  
+  .snap-password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .snap-error {
+    display: inline-block;
+    color: #ff5252;
+    font-size: 12px;
+    margin-top: 6px;
+  }
+  
+  /* Checkbox */
+  .snap-checkbox-container {
+    margin-bottom: 20px;
+  }
+  
+  .snap-checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .snap-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .snap-checkbox-custom {
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+  }
+
+  .snap-checkbox-custom>span{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .snap-checkbox:checked ~ .snap-checkbox-custom>span{
+    content: "";
+    position: absolute;
+    opacity: 0.1;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+  }
+  
+  
+  .snap-checkbox-text {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Forgot Password */
+  .snap-forgot-password {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Login Button */
+  .snap-btn-link {
+    width: 100%;
+    text-decoration: none;
+    margin-top: auto;
+    margin-bottom: 40px;
+  }
+  
+  .snap-login-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
     border-radius: 30px;
-    background-color: rgba(86, 94, 102, 0.575);
+    font-size: 16px;
+    font-weight: 500;
     color: white;
-    border: none;
-}
-
-.error{
-    font-size: 11px;
-color: red;
-}
-
-.btnCode{
-    width: 80%;
-    margin: 0px auto;
-        padding: 15px;
-    border-radius: 30px;
-    background-color: rgba(86, 94, 102, 0.575);
-    color: white;
-    border: none;
-
-}
-
-.icon{
-    padding: 10px;
-    background-color: transparent;
-    border: none;
-       border-radius: 8px;
-    background-color: yellow;
-}
-
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 480px) {
+    .snap-container {
+      padding: 0 15px;
+    }
+    
+    .snap-title {
+      font-size: 22px;
+      margin-bottom: 25px;
+    }
+    
+    .snap-login-btn {
+      padding: 12px;
+    }
+  }
+  
+  @media (min-width: 481px) {
+    .snap-container {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
